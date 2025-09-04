@@ -68,6 +68,6 @@ plt.xlabel("J [μA/cm²]")
 plt.grid(True, alpha=.3)
 plt.gca().ticklabel_format(useOffset=False)
 
-plt.savefig("./intro-computational-neuroscience/lista_2/figures/ex_5.png")
+plt.savefig("./intro-computational-neuroscience/list_2/figures/ex_5.png")
 # plt.show()
 

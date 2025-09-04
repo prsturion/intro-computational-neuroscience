@@ -15,15 +15,15 @@ def euler(
     cada f_i(t, *y) -> dy_i/dt.
 
     Parâmetros:
-        f_list : lista de funções derivadas (f_i(t, *y))
-        y0_list: lista de condições iniciais (mesmo tamanho de f_list)
+        f_list : list de funções derivadas (f_i(t, *y))
+        y0_list: list de condições iniciais (mesmo tamanho de f_list)
         t0     : tempo inicial
         tf     : tempo final
         h      : passo base da integração
 
     Retorna:
-        ts : lista dos tempos
-        ys : lista de listas; cada linha é a série temporal de uma variável
+        ts : list dos tempos
+        ys : list de lists; cada linha é a série temporal de uma variável
              (ys[i][j] = valor da i-ésima variável no j-ésimo instante de tempo)
     """
 
@@ -67,7 +67,7 @@ def find_crossings(values, L, direction='both'):
     com a opção de selecionar o tipo de transição (negativo-para-positivo, positivo-para-negativo, ou ambos).
     
     Parâmetros:
-        values    : lista de valores (por exemplo, resultado de uma função de t)
+        values    : list de valores (por exemplo, resultado de uma função de t)
         L         : valor de referência (o nível que estamos verificando os cruzamentos)
         direction: tipo de transição a ser considerado:
                     'both'  : considera transições de ambos os sentidos
@@ -75,12 +75,12 @@ def find_crossings(values, L, direction='both'):
                     'down'  : considera transições de positivo para negativo
 
     Retorna:
-        indices  : lista de índices onde a curva cruza o valor L
+        indices  : list de índices onde a curva cruza o valor L
     """
-    # Subtrai L de cada valor da lista
+    # Subtrai L de cada valor da list
     diff = [v - L for v in values]
     
-    # Inicializa lista para armazenar os índices de cruzamento
+    # Inicializa list para armazenar os índices de cruzamento
     indices = []
     
     for i in range(1, len(diff)):

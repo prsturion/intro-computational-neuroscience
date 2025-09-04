@@ -70,6 +70,6 @@ plt.grid(True, alpha=.3)
 plt.gca().ticklabel_format(useOffset=False)
 
 plt.tight_layout()
-plt.savefig("./intro-computational-neuroscience/lista_2/figures/ex_1.png")
+plt.savefig("./intro-computational-neuroscience/list_2/figures/ex_1.png")
 # plt.show()
 

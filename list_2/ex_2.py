@@ -2,20 +2,14 @@ from utils import *
 import matplotlib.pyplot as plt
 
 t0 = 0
-tf = 100
-delta_t = 1e-3
-
-J1 = 15
-J2 = 15
-
-t1 = 10
-t2 = t1 + 16.74
+tf = 30
+delta_t = .5e-3
 
 def J_inj(t):
-   if t >= t1 and t < t1 + .5:
-      return J1
-   elif t >= t2 and t < t2 + .5:
-      return J2
+   if t >= 0 and t < 0:
+      return 0
+   elif t >= 10 and t < 10.5:
+      return 13.119
    else:
       return 0
 
@@ -82,6 +76,6 @@ plt.grid(True, alpha=.3)
 plt.gca().ticklabel_format(useOffset=False)
 
 plt.tight_layout()
-plt.savefig("./intro-computational-neuroscience/lista_2/figures/ex_6_1.png")
+plt.savefig("./intro-computational-neuroscience/list_2/figures/ex_2_2.png")
 # plt.show()
 

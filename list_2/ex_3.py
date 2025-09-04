@@ -8,8 +8,8 @@ delta_t = .5e-3
 def J_inj(t):
    if t >= 0 and t < 0:
       return 0
-   elif t >= 10 and t < 10.5:
-      return 13.119
+   elif t >= 10 and t < 11:
+      return 6.839
    else:
       return 0
 
@@ -76,6 +76,6 @@ plt.grid(True, alpha=.3)
 plt.gca().ticklabel_format(useOffset=False)
 
 plt.tight_layout()
-plt.savefig("./intro-computational-neuroscience/lista_2/figures/ex_2_2.png")
+plt.savefig("./intro-computational-neuroscience/list_2/figures/ex_3_2.png")
 # plt.show()
 
