@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  2 OCT 2025 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  6 OCT 2025 20:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,163 +724,169 @@ Package pdftex.def Info: ../figures/ex_1.png  used on input line 32.
 
 {C:/Users/prstu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/prst
 u/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<../figures/ex_2.png, id=15, 578.16pt x 433.62pt>
-File: ../figures/ex_2.png Graphic file (type png)
-<use ../figures/ex_2.png>
-Package pdftex.def Info: ../figures/ex_2.png  used on input line 40.
+<../figures/ex_2_1.png, id=15, 578.16pt x 433.62pt>
+File: ../figures/ex_2_1.png Graphic file (type png)
+<use ../figures/ex_2_1.png>
+Package pdftex.def Info: ../figures/ex_2_1.png  used on input line 40.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
  [2 <../figures/ex_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+<../figures/ex_2_2.png, id=22, 664.884pt x 448.074pt>
+File: ../figures/ex_2_2.png Graphic file (type png)
+<use ../figures/ex_2_2.png>
+Package pdftex.def Info: ../figures/ex_2_2.png  used on input line 48.
+(pdftex.def)             Requested size: 341.43306pt x 230.09407pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<../figures/ex_3_gc0.png, id=22, 578.16pt x 433.62pt>
+[3 <../figures/ex_2_1.png> <../figures/ex_2_2.png>]
+<../figures/ex_3_gc0.png, id=31, 578.16pt x 433.62pt>
 File: ../figures/ex_3_gc0.png Graphic file (type png)
 <use ../figures/ex_3_gc0.png>
-Package pdftex.def Info: ../figures/ex_3_gc0.png  used on input line 50.
+Package pdftex.def Info: ../figures/ex_3_gc0.png  used on input line 60.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
-[3 <../figures/ex_2.png>]
-<../figures/ex_3_gc10.png, id=29, 578.16pt x 433.62pt>
+<../figures/ex_3_gc10.png, id=32, 578.16pt x 433.62pt>
 File: ../figures/ex_3_gc10.png Graphic file (type png)
 <use ../figures/ex_3_gc10.png>
-Package pdftex.def Info: ../figures/ex_3_gc10.png  used on input line 56.
+Package pdftex.def Info: ../figures/ex_3_gc10.png  used on input line 66.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
-<../figures/ex_3_gc50.png, id=30, 578.16pt x 433.62pt>
+ [4 <../figures/ex_3_gc0.png>]
+<../figures/ex_3_gc50.png, id=39, 578.16pt x 433.62pt>
 File: ../figures/ex_3_gc50.png Graphic file (type png)
 <use ../figures/ex_3_gc50.png>
-Package pdftex.def Info: ../figures/ex_3_gc50.png  used on input line 62.
+Package pdftex.def Info: ../figures/ex_3_gc50.png  used on input line 72.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
- [4 <../figures/ex_3_gc0.png> <../figures/ex_3_gc10.png>]
-<../figures/ex_3_gc100.png, id=39, 578.16pt x 433.62pt>
+<../figures/ex_3_gc100.png, id=40, 578.16pt x 433.62pt>
 File: ../figures/ex_3_gc100.png Graphic file (type png)
 <use ../figures/ex_3_gc100.png>
-Package pdftex.def Info: ../figures/ex_3_gc100.png  used on input line 68.
+Package pdftex.def Info: ../figures/ex_3_gc100.png  used on input line 78.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
-
-Overfull \hbox (13.56708pt too wide) in paragraph at lines 72--73
+ [5 <../figures/ex_3_gc10.png> <../figures/ex_3_gc50.png>]
+Overfull \hbox (13.56708pt too wide) in paragraph at lines 82--83
 []\T1/futs/m/n/10.95 A difer-ença en-tre os grá-fi-cos pode ser ex-pli-cada da 
 seguinte forma. No primeiro,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[5 <../figures/ex_3_gc50.png> <../figures/ex_3_gc100.png>]
-<../figures/ex_4_gc0.png, id=48, 578.16pt x 433.62pt>
+<../figures/ex_4_gc0.png, id=49, 578.16pt x 433.62pt>
 File: ../figures/ex_4_gc0.png Graphic file (type png)
 <use ../figures/ex_4_gc0.png>
-Package pdftex.def Info: ../figures/ex_4_gc0.png  used on input line 80.
+Package pdftex.def Info: ../figures/ex_4_gc0.png  used on input line 90.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
-<../figures/ex_4_gc10.png, id=49, 578.16pt x 433.62pt>
+[6 <../figures/ex_3_gc100.png>]
+<../figures/ex_4_gc10.png, id=56, 578.16pt x 433.62pt>
 File: ../figures/ex_4_gc10.png Graphic file (type png)
 <use ../figures/ex_4_gc10.png>
-Package pdftex.def Info: ../figures/ex_4_gc10.png  used on input line 86.
+Package pdftex.def Info: ../figures/ex_4_gc10.png  used on input line 96.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
- [6 <../figures/ex_4_gc0.png>]
-<../figures/ex_4_gc50.png, id=56, 578.16pt x 433.62pt>
+ [7 <../figures/ex_4_gc0.png>]
+<../figures/ex_4_gc50.png, id=64, 578.16pt x 433.62pt>
 File: ../figures/ex_4_gc50.png Graphic file (type png)
 <use ../figures/ex_4_gc50.png>
-Package pdftex.def Info: ../figures/ex_4_gc50.png  used on input line 92.
+Package pdftex.def Info: ../figures/ex_4_gc50.png  used on input line 102.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
- [7 <../figures/ex_4_gc10.png>]
-<../figures/ex_4_gc100.png, id=64, 578.16pt x 433.62pt>
+ [8 <../figures/ex_4_gc10.png>]
+<../figures/ex_4_gc100.png, id=71, 578.16pt x 433.62pt>
 File: ../figures/ex_4_gc100.png Graphic file (type png)
 <use ../figures/ex_4_gc100.png>
-Package pdftex.def Info: ../figures/ex_4_gc100.png  used on input line 98.
+Package pdftex.def Info: ../figures/ex_4_gc100.png  used on input line 108.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
- [8 <../figures/ex_4_gc50.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+ [9 <../figures/ex_4_gc50.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-<../figures/ex_5_I50_dend.png, id=71, 578.16pt x 433.62pt>
+<../figures/ex_5_I50_dend.png, id=78, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I50_dend.png Graphic file (type png)
 <use ../figures/ex_5_I50_dend.png>
-Package pdftex.def Info: ../figures/ex_5_I50_dend.png  used on input line 112.
+Package pdftex.def Info: ../figures/ex_5_I50_dend.png  used on input line 122.
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
-[9 <../figures/ex_4_gc100.png>]
-<../figures/ex_5_I100_dend.png, id=78, 578.16pt x 433.62pt>
+[10 <../figures/ex_4_gc100.png>]
+<../figures/ex_5_I100_dend.png, id=85, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I100_dend.png Graphic file (type png)
 <use ../figures/ex_5_I100_dend.png>
-Package pdftex.def Info: ../figures/ex_5_I100_dend.png  used on input line 118.
+Package pdftex.def Info: ../figures/ex_5_I100_dend.png  used on input line 128.
 
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
-<../figures/ex_5_I200_dend.png, id=79, 578.16pt x 433.62pt>
+<../figures/ex_5_I200_dend.png, id=86, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I200_dend.png Graphic file (type png)
 <use ../figures/ex_5_I200_dend.png>
-Package pdftex.def Info: ../figures/ex_5_I200_dend.png  used on input line 124.
+Package pdftex.def Info: ../figures/ex_5_I200_dend.png  used on input line 134.
 
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
- [10 <../figures/ex_5_I50_dend.png> <../figures/ex_5_I100_dend.png>]
-<../figures/ex_5_I50_soma.png, id=88, 578.16pt x 433.62pt>
+ [11 <../figures/ex_5_I50_dend.png> <../figures/ex_5_I100_dend.png>]
+<../figures/ex_5_I50_soma.png, id=95, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I50_soma.png Graphic file (type png)
 <use ../figures/ex_5_I50_soma.png>
-Package pdftex.def Info: ../figures/ex_5_I50_soma.png  used on input line 132.
+Package pdftex.def Info: ../figures/ex_5_I50_soma.png  used on input line 142.
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
-<../figures/ex_5_I100_soma.png, id=89, 578.16pt x 433.62pt>
+<../figures/ex_5_I100_soma.png, id=96, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I100_soma.png Graphic file (type png)
 <use ../figures/ex_5_I100_soma.png>
-Package pdftex.def Info: ../figures/ex_5_I100_soma.png  used on input line 138.
+Package pdftex.def Info: ../figures/ex_5_I100_soma.png  used on input line 148.
 
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
- [11 <../figures/ex_5_I200_dend.png> <../figures/ex_5_I50_soma.png>]
-<../figures/ex_5_I200_soma.png, id=98, 578.16pt x 433.62pt>
+ [12 <../figures/ex_5_I200_dend.png> <../figures/ex_5_I50_soma.png>]
+<../figures/ex_5_I200_soma.png, id=105, 578.16pt x 433.62pt>
 File: ../figures/ex_5_I200_soma.png Graphic file (type png)
 <use ../figures/ex_5_I200_soma.png>
-Package pdftex.def Info: ../figures/ex_5_I200_soma.png  used on input line 144.
+Package pdftex.def Info: ../figures/ex_5_I200_soma.png  used on input line 154.
 
 (pdftex.def)             Requested size: 284.52756pt x 213.39536pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-[12 <../figures/ex_5_I100_soma.png> <../figures/ex_5_I200_soma.png>]
-<../figures/ex_6a.png, id=107, 578.16pt x 433.62pt>
+[13 <../figures/ex_5_I100_soma.png> <../figures/ex_5_I200_soma.png>]
+<../figures/ex_6a.png, id=115, 578.16pt x 433.62pt>
 File: ../figures/ex_6a.png Graphic file (type png)
 <use ../figures/ex_6a.png>
-Package pdftex.def Info: ../figures/ex_6a.png  used on input line 154.
+Package pdftex.def Info: ../figures/ex_6a.png  used on input line 164.
 (pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-58.
+68.
 
 (C:\Users\prstu\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<../figures/ex_6b.png, id=108, 722.7pt x 867.24pt>
+<../figures/ex_6b.png, id=116, 722.7pt x 867.24pt>
 File: ../figures/ex_6b.png Graphic file (type png)
 <use ../figures/ex_6b.png>
-Package pdftex.def Info: ../figures/ex_6b.png  used on input line 162.
+Package pdftex.def Info: ../figures/ex_6b.png  used on input line 172.
 (pdftex.def)             Requested size: 341.43306pt x 409.72014pt.
 
-[13 <../figures/ex_6a.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+[14 <../figures/ex_6a.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-[14 <../figures/ex_6b.png>] (document.aux)
+[15 <../figures/ex_6b.png>] (document.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -889,10 +895,10 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14633 strings out of 474485
- 240664 string characters out of 5743735
+ 14642 strings out of 474485
+ 240897 string characters out of 5743735
  1931542 words of memory out of 5000000
- 36635 multiletter control sequences out of 15000+600000
+ 36642 multiletter control sequences out of 15000+600000
  605198 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,6n,79p,1351b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -903,9 +909,9 @@ blic/fourier/fourier-ms.pfb><C:/Users/prstu/AppData/Local/Programs/MiKTeX/fonts
 /type1/adobe/utopia/putb8a.pfb><C:/Users/prstu/AppData/Local/Programs/MiKTeX/fo
 nts/type1/adobe/utopia/putr8a.pfb><C:/Users/prstu/AppData/Local/Programs/MiKTeX
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on document.pdf (14 pages, 2515201 bytes).
+Output written on document.pdf (15 pages, 2640383 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

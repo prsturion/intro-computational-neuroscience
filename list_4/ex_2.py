@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 from parameters import PARAMS
 from initial_values import Y0
-from utils import rhs_full, integrate_rk4
+from utils import rhs_full, integrate_rk4, chi
 
 # ----------------------------
 # Simulation setup
@@ -91,5 +91,70 @@ ax2.set_title("B", loc="left")
 ax2.grid(True, ls="--", alpha=0.4)
 
 plt.tight_layout()
-plt.savefig("intro-computational-neuroscience/list_4/figures/ex_2.png", dpi=150)
+plt.savefig("intro-computational-neuroscience/list_4/figures/ex_2_1.png", dpi=150)
 plt.show()
+
+
+
+# Unpack states we need for currents and [Ca]
+Ca   = Y[:, 2]    # [M]
+mca  = Y[:, 6]
+mkca = Y[:, 7]
+mkahp = Y[:, 8]
+
+# Coupling current: Ic > 0 when Vd > Vs
+Ic = PARAMS["gc"] * (Vd - Vs)                 # [A]
+
+# Dendritic K currents
+IKCa  = PARAMS["gKCa"]  * mkca  * chi(Ca) * (Vd - PARAMS["EK"])  # [A]
+IKahp = PARAMS["gKahp"] * mkahp *           (Vd - PARAMS["EK"])  # [A]
+
+# Time windows (as in the caption): 
+# A,B: 0.86–0.91 s (zoom on voltages and Ic)
+# C,D: 0.85–1.15 s ([Ca] and K-currents during a burst)
+tA0, tA1 = 0.86, 0.91
+tC0, tC1 = 0.85, 1.15
+winA = (t >= tA0) & (t <= tA1)
+winC = (t >= tC0) & (t <= tC1)
+
+# Unit conversions for plotting
+mV  = 1e3
+nA  = 1e9
+mM  = 1e3
+
+fig2, axs = plt.subplots(2, 2, figsize=(9.2, 6.2))
+(axA, axC), (axB, axD) = axs   # layout to match A/C top, B/D bottom
+
+# Panel A: Vs (solid) and Vd (dashed), zoomed
+axA.plot(t[winA], (Vs[winA] * mV), lw=1.2, label=r"$V_s$")
+axA.plot(t[winA], (Vd[winA] * mV), lw=1.2, ls="--", label=r"$V_d$")
+axA.set_ylabel("V (mV)")
+axA.set_title("A", loc="left")
+axA.grid(True, ls="--", alpha=0.35)
+axA.legend(loc="upper right", frameon=False, fontsize=9)
+
+# Panel B: coupling current Ic, same zoom as A
+axB.plot(t[winA], (Ic[winA] * nA), lw=1.2)
+axB.set_xlabel("Time (s)")
+axB.set_ylabel(r"$I_c$ (nA)")
+axB.set_title("B", loc="left")
+axB.grid(True, ls="--", alpha=0.35)
+
+# Panel C: calcium concentration [Ca], wider window
+axC.plot(t[winC], (Ca[winC] * mM), lw=1.2)
+axC.set_ylabel(r"[Ca] (mM)")
+axC.set_title("C", loc="left")
+axC.grid(True, ls="--", alpha=0.35)
+
+# Panel D: dendritic K-currents; IKCa dotted; 100*IKahp dashed
+axD.plot(t[winC], (IKCa[winC] * nA), lw=1.2, ls=":",  label=r"$I_{KCa}$")
+axD.plot(t[winC], (100.0 * IKahp[winC] * nA), lw=1.2, ls="--", label=r"$100\times I_{KAHp}$")
+axD.set_xlabel("Time (s)")
+axD.set_ylabel("Dendritic K-currents (nA)")
+axD.set_title("D", loc="left")
+axD.grid(True, ls="--", alpha=0.35)
+axD.legend(loc="upper right", frameon=False, fontsize=9)
+
+plt.tight_layout()
+plt.savefig("intro-computational-neuroscience/list_4/figures/ex_2_2.png", dpi=150)
+# plt.show()  # optional, if you want to show it immediately
