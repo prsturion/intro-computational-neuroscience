@@ -1,0 +1,220 @@
+\documentclass[portuguese,11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{xcolor}
+\usepackage{nameref}
+\usepackage[brazil]{babel}
+\usepackage{authblk}
+\usepackage{fourier}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[colorlinks, urlcolor=blue]{hyperref}
+\title{Introdução à Neurociência Computacional\\Lista de Exercícios 7}
+\author{Paulo R. Sturion}
+\begin{document}
+	\maketitle
+	
+	\noindent Todos os códigos escritos para produzir os resultados dos exercícios a seguir estão disponibilizados de forma clara e organizada no repositório Github:
+	
+	\begin{center}
+		\noindent \href{https://github.com/prsturion/intro-computational-neurosciene.git}{https://github.com/prsturion/intro-computational-neuroscience.git} \newline
+	\end{center}
+	
+	
+	\noindent\textbf{Questão 1:}
+	
+	\noindent\textbf{(a)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_1a.png}
+		\caption{Simulação do modelo AdEx.}
+	\end{figure}
+	
+	\noindent\textbf{(b)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_1b.png}
+		\caption{Curvas f-I do modelo AdEx.}
+	\end{figure}
+	
+	
+	\noindent\textbf{Questão 2:}
+	
+	
+	\noindent\textbf{(a)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_2a.png}
+		\caption{Padrões de disparo do modelo AdEx.}
+	\end{figure}
+	
+	\noindent\textbf{(b)}
+	
+	\noindent\textbf{(i)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_2bi.png}
+		\caption{Plano de fase do modelo AdEx.}
+	\end{figure}
+	
+	
+	\noindent\textbf{(ii)}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{../figures/ex_2bii.png}
+	\caption{Plano de fase do modelo AdEx com degrau de corrente constante.}
+	\end{figure}
+	
+	\noindent\textbf{(iii)}
+	
+	\emph{(i) Pulso com $I=0$.} No plano de fase com $I=0$ as nulclinas são
+	\[
+	\dot V=0 \;\Rightarrow\; w=\frac{E_L-V}{R}+\frac{\Delta_T}{R}\,e^{(V-V_T)/\Delta_T},\qquad
+	\dot w=0 \;\Rightarrow\; w=a\,(V-E_L).
+	\]
+	Para o conjunto usado (\(a=0\)), a nulclina de \(w\) coincide com o eixo \(w=0\). As duas nulclinas se cruzam em dois pontos: um nó estável perto de \(V\approx -69\,\mathrm{mV}\) e uma sela perto de \(V\approx -45\,\mathrm{mV}\) (ambos em \(w=0\)). O pulso curto de corrente desloca o estado para a direita, ultrapassando o limiar exponencial; quando \(V\) atinge \(V_{\text{pico}}\) ocorre o reset \(V\to V_{\text{reset}}\) e \(w\to w+b\). Como \(a=0\), \(w\) depois decai exponencialmente a zero. A trajetória no plano de fase sai da vizinhança do nó estável, cruza a separatriz da sela, dispara, sofre o salto de redefinição e retorna ao atrator (nó estável). No tempo, observa-se um único potencial de ação seguido de relaxação de \(V(t)\) de volta ao repouso e um dente em \(w(t)\) (salto por \(b\) seguido de decaimento).
+	
+	\emph{(ii) Degrau constante \(I=I_{\mathrm{dc}}\).} Com corrente constante diferente de zero, a nulclina de \(V\) se \emph{eleva} rigidamente:
+	\[
+	\dot V=0 \;\Rightarrow\; w=I_{\mathrm{dc}}+\frac{E_L-V}{R}+\frac{\Delta_T}{R}\,e^{(V-V_T)/\Delta_T}.
+	\]
+	Para o valor usado (p.\,ex. \(I_{\mathrm{dc}}=60\)–\(120\,\mathrm{pA}\)), essa curva fica acima de \(w=0\) na faixa relevante de \(V\) e \emph{não} há interseção com a nulclina de \(w\). Logo, não existem pontos fixos: o sistema opera em um ciclo limite produzido pela não linearidade exponencial e pelo mecanismo de reset. No retrato de fase, a órbita gira em torno da região próxima ao “cotovelo” da nulclina de \(V\) e, cada vez que atinge \(V_{\text{pico}}\), sofre a redefinição \((V,w)\mapsto(V_{\text{reset}},\,w+b)\), o que aparece como saltos discretos (marcados) antes de reiniciar a ascensão. No tempo, isso se manifesta como disparos periódicos: \(V(t)\) apresenta trens de spikes e \(w(t)\) assume uma forma em serra (salta por \(b\) a cada spike e decai entre eles). 
+	
+	\emph{Síntese.} No caso (i), com \(I=0\), o retrato de fase tem nó estável e sela; um pulso suficientemente forte cruza a separatriz, gera um spike único e o sistema retorna ao nó. No caso (ii), o degrau \(I_{\mathrm{dc}}\) acima do reobase remove os pontos fixos (as nulclinas não se cruzam), e o sistema entra em regime oscilatório sustentado (ciclo limite), produzindo disparos repetidos e um \(w(t)\) denteado devido aos saltos \(+b\) seguidos de relaxação.
+	
+	
+	\noindent\textbf{Questão 3:}
+	
+	\noindent\textbf{(a)}
+	
+	\noindent\textbf{(i)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_3ai.png}
+		\caption{Plano de fase do modelo da Questão 3a.}
+	\end{figure}
+	
+	\noindent\textbf{(ii)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=12cm]{../figures/ex_3aii.png}
+		\caption{Simulação do modelo da Questão 3a para diferentes degraus de corrente.}
+	\end{figure}
+	
+	\noindent\textbf{(iii)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_3aiii.png}
+		\caption{Planos de fase do modelo da Questão 3a para os diferentes degraus de corrente.}
+	\end{figure}
+	
+	\noindent\textbf{(iv)}
+	
+	\begin{itemize}
+		\item \textbf{$I=300\,\mathrm{pA}$ (repouso).} As nulclinas de $v$ e $u$ se cruzam em dois pontos: um \emph{nó estável} (à esquerda) e um \emph{ponto de sela} (à direita). As trajetórias próximas convergem para o nó estável, de modo que, após pequenas perturbações, o sistema retorna ao repouso sem manter oscilações. Não há disparo sustentado.
+		
+		\item \textbf{$I=370\,\mathrm{pA}$ (início de disparos).} A corrente desloca a nulclina de $v$ para cima, eliminando os pontos de equilíbrio reais (as nulclinas deixam de se interceptar). Sem ponto fixo atrator, a dinâmica passa a orbitar um \emph{ciclo‐limite}, produzindo disparos periódicos. Este é o limiar dinâmico de excitação: a transição repouso $\to$ oscilação.
+		
+		\item \textbf{$I=500$ e $550\,\mathrm{pA}$ (firing tônico).} A ausência de equilíbrio persiste e o ciclo‐limite domina a dinâmica. O aumento de $I$ encurta o período e pode ampliar levemente a excursão em $v$, resultando em maior frequência de disparos enquanto o pulso permanece aplicado.
+	\end{itemize}
+	
+	\noindent\textbf{Síntese.} A passagem do regime de repouso para o de disparos ocorre quando o ponto fixo estável desaparece com a sela conforme $I$ cresce, o que é compatível com uma bifurcação do tipo \emph{saddle–node on invariant circle} (SNIC). Geometricamente, isso aparece como (i) interseção das nulclinas com nó estável (sem disparos) para correntes menores e (ii) perda da interseção (sem ponto fixo) e surgimento de ciclo‐limite (disparos sustentados) para correntes acima do limiar.
+	
+	
+	
+	\noindent\textbf{(b)}
+	
+	\noindent\textbf{(i)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_3bi.png}
+		\caption{Plano de fase do modelo da Questão 3b.}
+	\end{figure}
+	
+	\noindent\textbf{(ii)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=12cm]{../figures/ex_3bii.png}
+		\caption{Simulação do modelo da Questão 3b para diferentes degraus de corrente.}
+	\end{figure}
+	
+	\noindent\textbf{(iii)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_3biii.png}
+		\caption{Planos de fase do modelo da Questão 3b para os diferentes degraus de corrente.}
+	\end{figure}
+	
+	\noindent\textbf{(iv)}
+	
+	Observando os retratos de fase obtidos, nota-se que o aumento da corrente de entrada ($I$) desloca a nulclina de $v$ para cima, alterando o número e a posição dos pontos fixos do sistema.
+	
+	Para valores baixos de corrente, como $I = 200\,\text{pA}$, ainda existe um ponto fixo estável. Nessa condição, a trajetória tende a retornar ao equilíbrio após pequenas perturbações, não ocorrendo disparos sustentados.
+	
+	Com o aumento da corrente ($I = 300\,\text{pA}$ ou superior), a nulclina de $v$ se eleva o suficiente para eliminar os pontos fixos reais, fazendo com que o sistema entre em um \textit{ciclo limite}. Nessa região, a trajetória no plano de fase torna-se periódica, descrevendo os disparos sucessivos do neurônio.
+	
+	O ponto de redefinição (\textit{reset}) causa o retorno abrupto de $v$ a valores negativos e o incremento de $u$, o que representa o efeito da corrente de adaptação. Essa dinâmica caracteriza o comportamento típico de \textbf{``tonic spiking''}: abaixo do limiar de corrente, o potencial de membrana é estável; acima dele, surgem oscilações autossustentadas, correspondentes a trens de potenciais de ação com adaptação gradual na frequência.
+	
+
+
+	\noindent\textbf{(c)}
+	
+	
+	\noindent\textbf{(i)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{../figures/ex_3ci.png}
+	\caption{Plano de fase do modelo da Questão 3c.}
+\end{figure}
+
+\noindent\textbf{(ii)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{../figures/ex_3cii.png}
+	\caption{Simulação do modelo da Questão 3c para diferentes degraus de corrente.}
+\end{figure}
+
+\noindent\textbf{(iii)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{../figures/ex_3ciii.png}
+	\caption{Planos de fase do modelo da Questão 3c para os diferentes degraus de corrente.}
+\end{figure}
+
+\noindent\textbf{(iv)}
+
+
+Para o modelo com termo cúbico em $u(v)$, os retratos de fase mostram uma transição de repouso estável para oscilações sustentadas conforme a corrente $I$ aumenta.
+
+\begin{itemize}
+	\item \textbf{Correntes baixas (e.g.\ $I=200\,\text{pA}$):} Existe uma interseção real das nulclinas $v$ e $u$ que gera um \emph{foco estável}. As trajetórias espiralam para esse ponto fixo (traço $<0$, determinante $>0$), logo a solução temporal converge para o repouso: sem disparos.
+	
+	\item \textbf{Correntes intermediárias (e.g.\ $I=400$--$470\,\text{pA}$):} O foco estável aproxima-se da região não linear determinada pela nulclina de $v$ (parábola deslocada por $I$) e as trajetórias, durante o pulso ($t\in[20,180]\,\text{ms}$), podem cruzar o ramo excitável. Observa-se \emph{disparo transitório} (um ou poucos \emph{spikes}) enquanto o sistema faz uma grande volta no plano $(v,u)$ e depois retorna ao equilíbrio quando o pulso cessa.
+	
+	\item \textbf{Correntes altas (e.g.\ $I\ge 500\,\text{pA}$):} A interseção das nulclinas desaparece (perda do ponto fixo estável, consistente com uma bifurcação) e surge uma órbita fechada: um \emph{ciclo limite}. No tempo, isso corresponde a \emph{disparos periódicos sustentados} enquanto $I$ permanece ligado. A variável de adaptação $u$ cresce ao longo dos disparos, modulando o período/amplitude, e após o término do pulso as trajetórias retornam lentamente à vizinhança do antigo repouso.
+\end{itemize}
+
+Em suma: para $I$ pequeno, o sistema fica no ponto fixo (repouso); para $I$ intermediário, há oscilações transitórias induzidas pelo pulso; para $I$ grande, o sistema entra em um ciclo limite e dispara regularmente, o que é exatamente o que se observa nas trajetórias e nulclinas dos retratos de fase.
+
+	
+	
+\end{document}
