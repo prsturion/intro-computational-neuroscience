@@ -1,0 +1,2 @@
+I mean rate: 31.25 Hz per neuron
+O mean rate: 0.00 Hz per neuron

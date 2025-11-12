@@ -1,0 +1,126 @@
+\documentclass[portuguese,11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{xcolor}
+\usepackage{nameref}
+\usepackage{babel}
+\usepackage{authblk}
+\usepackage{fourier}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[colorlinks, urlcolor=blue]{hyperref}
+\title{Introdução à Neurociência Computacional\\Lista de Exercícios 8}
+\author{Paulo R. Sturion}
+\begin{document}
+	\maketitle
+	
+	\noindent Todos os códigos escritos para produzir os resultados dos exercícios a seguir estão disponibilizados de forma clara e organizada no repositório Github:
+	
+	\begin{center}
+		\noindent \href{https://github.com/prsturion/intro-computational-neurosciene.git}{https://github.com/prsturion/intro-computational-neuroscience.git} \newline
+	\end{center}
+	
+	
+	\noindent\textbf{Questão 1:}
+	
+	\noindent\textbf{(a)} 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_1a.png}
+		\caption{Simulação do modelo de neurônios acoplados da Questão 1.}
+	\end{figure}
+	
+	\noindent\textbf{(b)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_1b.png}
+		\caption{Simulação do modelo de neurônios acoplados da Questão 1 com a inversão de papeis pedida no item (b).}
+	\end{figure}
+	
+	\noindent\textbf{(c)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=11cm]{../figures/ex_1c.png}
+		\caption{Resultados do item (c).}
+	\end{figure}
+	
+	\noindent\textbf{(d)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_010.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_012.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_014.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_016.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_018.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_020.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_022.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_024.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_026.png}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{../figures/ex_1d_g_028.png}
+		\caption{Gráficos dos disparos e da fase para os diferentes valores de $\bar{g}_{EI}$.}
+	\end{figure}
+	
+
+	Ao varrer $\bar g_{EI}\in\{0{,}10,0{,}12,0{,}14,0{,}16,0{,}18,0{,}20,0{,}22,0{,}24,0{,}26,0{,}28\}\ \text{mS/cm}^2$, observou-se:
+	
+	\begin{itemize}
+		\item \textbf{Sincronização $1{:}1$ com travamento de fase:} 
+		para $\bar g_{EI}=\{0{,}10,\ 0{,}12,\ 0{,}14\}\ \text{mS/cm}^2$, o neurônio I dispara um pico para cada pico de E, 
+		com atraso aproximadamente constante $\delta\simeq 3{,}8\to 2{,}1\ \text{ms}$ ao longo dos disparos.
+		\item \textbf{Acima de $\bar g_{EI}\ge 0{,}16\ \text{mS/cm}^2$:} 
+		não há travamento de fase; o atraso $\delta$ varia sistematicamente (inclusive tornando-se negativo), 
+		caracterizando perda de sincronização $1{:}1$.
+		\item \textbf{Sincronização $n{:}1$:} não foi observada para nenhum dos valores testados 
+		(isto é, não houve $n{:}1$ com $n\ge 2$).
+	\end{itemize}
+	
+		
+	
+	
+	
+\end{document}
